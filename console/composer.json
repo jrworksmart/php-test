@@ -1,0 +1,9 @@
+{
+    "require": {
+        "symfony/console": "^3.2",
+        "dragonbe/vies": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {"Chronotruck\\": "src/"}
+    }
+}

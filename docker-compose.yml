@@ -1,0 +1,4 @@
+console:
+  build: .
+  volumes:
+    - ./console:/console
