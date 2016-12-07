@@ -9,14 +9,14 @@ via l'intermédiaire de [la librairie DragonB/vies](https://github.com/DragonBe/
 
 Après avoir cloné le repo, normalement les commandes suivantes suffisent (il faut avoir composer et docker-compose sur la machine hôte)
 
-```bash
+```shell
 composer --working-dir=./console install
 docker-compose run console bash
 ```
 
 Une fois dans le container, la commande est appelée de la manière suivante :
 
-```bash
+```shell
 root@xxx:/console# php app.php check-vat-number FR85821267952
 ```
 
@@ -37,7 +37,7 @@ Afin d'historiser l'utilisation de la console, mettre en place un système de lo
 
 - Ce fichier doit se trouver sur le système hôte (et donc être monté en tant que volume du container)
 - Le système de log utilisé doit respecter PSR-3
-- Pour chaque expécution de la commande, une ligne doit être insérée dans le fichier avec la forme suivante : 
+- Pour chaque exécution de la commande, une ligne doit être insérée dans le fichier avec la forme suivante : 
 ```
 [Date au format Y-m-d H:i:s] [numéro de TVA] [1 si le numéro est valide, 0 si non valide]
 ```
